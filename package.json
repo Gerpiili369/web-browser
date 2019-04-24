@@ -1,0 +1,47 @@
+{
+    "name": "web-browser",
+    "version": "0.1.0",
+    "description": "",
+    "main": "main/src",
+    "scripts": {
+        "bundle": "webpack",
+        "bundle-dev": "webpack -d --watch",
+        "serve": "electron .",
+        "serve-dev": "nodemon --watch ./main/src/**/* --exec npm run serve",
+        "start": "npm-run-all --parallel bundle-dev serve-dev"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Gerpiili369/web-browser.git"
+    },
+    "author": "Gerpiili369",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Gerpiili369/web-browser/issues"
+    },
+    "homepage": "https://github.com/Gerpiili369/web-browser#readme",
+    "dependencies": {
+        "csp-webpack-plugin": "^2.0.2",
+        "react": "^16.8.2",
+        "react-dom": "^16.8.2",
+        "react-router": "^4.3.1",
+        "react-router-dom": "^4.3.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.3.3",
+        "@babel/preset-env": "^7.3.1",
+        "@babel/preset-react": "^7.0.0",
+        "babel-loader": "^8.0.5",
+        "css-loader": "^2.1.0",
+        "electron": "^4.1.4",
+        "electron-reload": "^1.4.0",
+        "html-webpack-plugin": "^3.2.0",
+        "node-sass": "^4.11.0",
+        "nodemon": "^1.18.10",
+        "sass-loader": "^7.1.0",
+        "style-loader": "^0.23.1",
+        "webpack": "^4.29.4",
+        "webpack-cli": "^3.2.3",
+        "webpack-dev-server": "^3.1.14"
+    }
+}
