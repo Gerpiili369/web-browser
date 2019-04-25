@@ -21,7 +21,6 @@
     },
     "homepage": "https://github.com/Gerpiili369/web-browser#readme",
     "dependencies": {
-        "csp-webpack-plugin": "^2.0.2",
         "react": "^16.8.2",
         "react-dom": "^16.8.2",
         "react-router": "^4.3.1",
@@ -36,6 +35,7 @@
         "electron": "^4.1.4",
         "electron-reload": "^1.4.0",
         "html-webpack-plugin": "^3.2.0",
+        "csp-webpack-plugin": "^2.0.2",
         "node-sass": "^4.11.0",
         "nodemon": "^1.18.10",
         "sass-loader": "^7.1.0",
