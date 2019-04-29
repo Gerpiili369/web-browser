@@ -4,11 +4,13 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { browserHistory } from 'react-router';
 import './Styles/import.scss';
 
+import Tab from './Components/Tab';
+
 class App extends Component {
     render() {
         return (
             <div>
-                <p>Hello world</p>
+                <Tab url="https://google.com" />
             </div>
         )
     }
