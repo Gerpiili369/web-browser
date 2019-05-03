@@ -48,6 +48,7 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify('production')
         }),
         new HtmlWebpackPlugin({
+            title: 'Web browser',
             template: `${ SRC_DIR }/index.ejs`,
         }),
         new CSPWebpackPlugin({
