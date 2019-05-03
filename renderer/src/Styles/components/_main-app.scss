@@ -1,0 +1,18 @@
+.main-app {
+    position: fixed;
+    left: auto;
+    right: auto;
+    top: 23px;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+
+    .toolbar {
+        width: 60px;
+    }
+
+    .tab-bar {
+        width: 138px;
+        overflow: overlay;
+    }
+}

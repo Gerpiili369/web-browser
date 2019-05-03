@@ -1,1 +1,8 @@
-@import 'base/main.scss';
+@import 'base/main';
+
+@import 'components/address-bar';
+@import 'components/content';
+@import 'components/main-app';
+@import 'components/open-tabs';
+@import 'components/tab';
+@import 'components/title-bar';

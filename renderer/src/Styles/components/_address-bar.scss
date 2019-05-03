@@ -1,0 +1,11 @@
+.address-bar {
+    background: white;
+    height: 50px;
+    margin: 10px 0 1px;
+    display: flex;
+
+    input {
+        border: none;
+        width: 100%
+    }
+}

@@ -1,0 +1,9 @@
+.open-tabs {
+    width: 100%;
+    display: flex;
+
+    .tab-divider {
+        padding: 5px;
+        cursor: w-resize;
+    }
+}
