@@ -36,7 +36,7 @@ class AddressBar extends Component {
 
     render() {
         return (
-            <div className="address-br">
+            <div className="address-bar">
                 <input value={ this.state.url } type="text" name="address" onKeyDown={ this.keyPress } onChange={ this.handleChange } />
             </div>
         );
