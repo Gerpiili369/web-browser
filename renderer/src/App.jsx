@@ -7,9 +7,19 @@ import ReactDOM from 'react-dom';
 import MainApp from './Components/MainApp';
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            background: '',
+        }
+    }
+
     render() {
         return (
-            <div className="app">
+            <div className="app" style={{
+                backgroundImage: `url('${ this.state.background }')`
+            }}>
                 <div className="title-bar">titlebar placeholder</div>
                 <MainApp />
             </div>
