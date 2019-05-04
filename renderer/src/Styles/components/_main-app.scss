@@ -8,11 +8,20 @@
     display: flex;
 
     .toolbar {
-        width: 60px;
+        width: 3%;
+        min-width: 40px;
+        max-width: 60px;
     }
 
     .tab-bar {
-        width: 138px;
-        overflow: overlay;
+        width: 70px;
+        overflow-x: hidden;
+        overflow-y: overlay;
+
+        @media screen and (min-width: 1200px) {
+            width: 10%;
+            min-width: 70px;
+            max-width: 140px;
+        }
     }
 }
