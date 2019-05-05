@@ -4,6 +4,7 @@ import './Styles/import.scss';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+import TitleBar from './Components/TitleBar';
 import MainApp from './Components/MainApp';
 
 class App extends Component {
@@ -20,7 +21,7 @@ class App extends Component {
             <div className="app" style={{
                 backgroundImage: `url('${ this.state.background }')`
             }}>
-                <div className="title-bar">titlebar placeholder</div>
+                <TitleBar title={ document.querySelector('title').innerHTML } />
                 <MainApp />
             </div>
         )

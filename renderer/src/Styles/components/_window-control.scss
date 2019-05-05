@@ -1,0 +1,32 @@
+.window-control {
+    -webkit-app-region: no-drag;
+    display: flex;
+    height: 21px;
+    width: 140px;
+
+    .icon {
+        width: calc(100% / 3);
+        height: 100%;
+        text-align: center;
+        
+        &:hover {
+            background: rgba(#FFF, 0.4);
+        }
+    }
+
+    .window-close {
+        &:hover {
+            background: red;
+        }
+    }
+    
+    svg {
+        stroke: white;
+        fill: transparent;
+        width: 10px;
+        height: 10px;
+        margin: 5px auto 6px;
+    }
+}
+
+

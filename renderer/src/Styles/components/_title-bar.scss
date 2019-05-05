@@ -1,5 +1,11 @@
 .title-bar {
+    -webkit-app-region: drag;
+    -webkit-user-select: none;
     display: flex;
-    background: palegreen;
+    background: #555;
     height: 23px;
+}
+
+.title {
+    width: 100%;
 }

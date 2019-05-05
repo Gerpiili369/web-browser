@@ -10,6 +10,8 @@ require('electron-reload')(path.join(__dirname, '..', '..', 'renderer', 'dist', 
  */
 function createWindow() {
     win = new BrowserWindow({
+        frame: false,
+        transparent: true,
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false,
