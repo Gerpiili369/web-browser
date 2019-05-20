@@ -21,6 +21,6 @@ class TitleBar extends Component {
 
 TitleBar.propTypes = {
     title: PropTypes.string
-}
+};
 
 export default TitleBar;

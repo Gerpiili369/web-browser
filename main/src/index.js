@@ -22,7 +22,7 @@ function createWindow() {
     win.webContents.openDevTools();
 
     win.on('closed', () => {
-        win = null
+        win = null;
     });
 }
 

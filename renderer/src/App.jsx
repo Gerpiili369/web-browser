@@ -13,7 +13,7 @@ class App extends Component {
 
         this.state = {
             background: '',
-        }
+        };
     }
 
     render() {
@@ -24,7 +24,7 @@ class App extends Component {
                 <TitleBar title={ document.querySelector('title').innerHTML } />
                 <MainApp />
             </div>
-        )
+        );
     }
 }
 

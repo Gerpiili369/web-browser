@@ -18,7 +18,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.scss$/,
+                test: /\.scss$/u,
                 use: [
                     'style-loader',
                     'css-loader',
@@ -26,15 +26,15 @@ module.exports = {
                 ]
             },
             {
-                test: /\.png$/,
+                test: /\.png$/u,
                 loader: 'url-loader?limit=100000&minetype=image/png'
             },
             {
-                test: /\.jpg/,
+                test: /\.jpg/u,
                 loader: 'file-loader'
             },
             {
-                test: /\.(js|jsx)$/,
+                test: /\.(?<js>js|jsx)$/u,
                 include: SRC_DIR,
                 loader: 'babel-loader',
                 query: {
