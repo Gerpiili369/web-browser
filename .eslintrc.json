@@ -243,6 +243,10 @@
         "no-with": "error",
         "nonblock-statement-body-position": "error",
         "object-curly-newline": "error",
+        "object-curly-spacing": [
+            "error",
+            "always"
+        ],
         "object-shorthand": "off",
         "one-var": "off",
         "one-var-declaration-per-line": "error",
@@ -267,6 +271,16 @@
         "quote-props": "off",
         "quotes": "off",
         "radix": "error",
+        "react/jsx-curly-spacing": [
+            "error", 
+            {
+                "when": "always",
+                "children": true,
+                "spacing":  {
+                    "objectLiterals": "never"
+                }
+            }
+        ],
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",
         "react/no-unknown-property": "error",
