@@ -23,7 +23,8 @@
                 - SiteBubble
         - Tabs
             - Tab
-                - AddressBar
+                - TabControls
+                    - AddressBar
                 - Content
         - TabBar
             - TabBubble

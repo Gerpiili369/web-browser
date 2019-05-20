@@ -1,7 +1,7 @@
 // Tab Component
 
 import React, { Component } from 'react';
-import AddressBar from './AddressBar';
+import TabControls from './TabControls';
 import Content from './Content';
 import PropTypes from 'prop-types';
 
@@ -42,7 +42,7 @@ class Tab extends Component {
     render() {
         return (
             <div className="tab">
-                <AddressBar url={ this.state.url } loading={ this.state.loading } onManualUrlEntry={ this.handleManualUrlChange } />
+                <TabControls tabState={this.state} onManualUrlEntry={ this.handleManualUrlChange } />
                 <Content url={ this.state.urlEntry } onLoadStart={ this.handleLoadStart } onLoadStop={ this.handleLoadStop } />
             </div>
         );
