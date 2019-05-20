@@ -7,7 +7,7 @@ class Icon extends Component {
 
         this.state = {
             content: this.props.content,
-        }
+        };
     }
 
     render() {
@@ -23,6 +23,6 @@ Icon.propTypes = {
     onClick: PropTypes,
     content: PropTypes.any,
     className: PropTypes.string,
-}
+};
 
 export default Icon;

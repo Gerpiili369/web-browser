@@ -39,6 +39,6 @@ Content.propTypes = {
     onLoadStart: PropTypes.function,
     onLoadStop: PropTypes.function,
     url: PropTypes.string
-}
+};
 
 export default Content;

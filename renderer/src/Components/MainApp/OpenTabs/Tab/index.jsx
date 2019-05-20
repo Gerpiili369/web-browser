@@ -13,7 +13,7 @@ class Tab extends Component {
             url: '',
             urlEntry: this.props.url,
             loading: false,
-        }
+        };
 
         this.handleLoadStart = this.handleLoadStart.bind(this);
         this.handleLoadStop = this.handleLoadStop.bind(this);
@@ -30,7 +30,7 @@ class Tab extends Component {
         this.setState({
             loading: false,
             url: evt.target.getURL(),
-        })
+        });
     }
 
     handleManualUrlChange(url) {
@@ -42,7 +42,7 @@ class Tab extends Component {
     render() {
         return (
             <div className="tab">
-                <TabControls tabState={this.state} onManualUrlEntry={ this.handleManualUrlChange } />
+                <TabControls tabState={ this.state } onManualUrlEntry={ this.handleManualUrlChange } />
                 <Content url={ this.state.urlEntry } onLoadStart={ this.handleLoadStart } onLoadStop={ this.handleLoadStop } />
             </div>
         );
@@ -51,7 +51,7 @@ class Tab extends Component {
 
 Tab.propTypes = {
     url: PropTypes.string,
-}
+};
 
 export default Tab;
 

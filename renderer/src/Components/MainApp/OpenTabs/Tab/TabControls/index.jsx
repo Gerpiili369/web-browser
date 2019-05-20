@@ -8,7 +8,7 @@ class TabControls extends Component {
     constructor(props) {
         super(props);
     }
-  
+
     render() {
         return (
             <div className="tab-controls">
@@ -19,6 +19,6 @@ class TabControls extends Component {
 }
 
 TabControls.propTypes = {
-}
+};
 
 export default TabControls;

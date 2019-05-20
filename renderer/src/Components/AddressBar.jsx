@@ -13,7 +13,7 @@ class AddressBar extends Component {
         this.state = {
             url: this.props.url,
             oldUrl: this.props.url,
-        }
+        };
     }
 
     componentDidUpdate() {
@@ -47,6 +47,6 @@ AddressBar.propTypes = {
     url: PropTypes.string,
     loading: PropTypes.bool,
     onManualUrlEntry: PropTypes.function,
-}
+};
 
 export default AddressBar;

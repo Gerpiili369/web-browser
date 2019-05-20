@@ -19,7 +19,7 @@ class WindowControl extends Component {
             maxMove: false,
             unmaxSize: remote.getCurrentWindow().getSize(),
             maximized: remote.getCurrentWindow().isMaximized(),
-        }
+        };
 
         this.removeListeners = this.removeListeners.bind(this);
         this.handleMaximized = this.handleMaximized.bind(this);
