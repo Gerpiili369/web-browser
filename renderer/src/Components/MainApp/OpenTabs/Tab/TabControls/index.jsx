@@ -5,10 +5,6 @@ import AddressBar from '../../../../AddressBar';
 import PropTypes from 'prop-types';
 
 class TabControls extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div className="tab-controls">
@@ -19,6 +15,11 @@ class TabControls extends Component {
 }
 
 TabControls.propTypes = {
+    tabState: {
+        url: PropTypes.string,
+        loading: PropTypes.bool,
+    },
+    onManualUrlEntry: PropTypes.function,
 };
 
 export default TabControls;
