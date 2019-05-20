@@ -25,9 +25,12 @@
     "rules": {
         "accessor-pairs": "error",
         "array-bracket-newline": "error",
-        "array-bracket-spacing": "error",
+        "array-bracket-spacing": [
+            "error",
+            "never"
+        ],
         "array-callback-return": "error",
-        "array-element-newline": "error",
+        "array-element-newline": "off",
         "arrow-body-style": "error",
         "arrow-parens": [
             "error",
@@ -45,16 +48,9 @@
             "error",
             "always"
         ],
-        "brace-style": [
-            "error",
-            "1tbs",
-            {
-                "allowSingleLine": true
-            }
-        ],
         "callback-return": "error",
-        "camelcase": "off",
-        "capitalized-comments": "off",
+        "camelcase": "warn",
+        "capitalized-comments": "warn",
         "class-methods-use-this": "off",
         "comma-dangle": "off",
         "comma-spacing": [
@@ -82,16 +78,16 @@
             "property"
         ],
         "dot-notation": "error",
-        "eol-last": "off",
+        "eol-last": "warn",
         "eqeqeq": "off",
         "func-call-spacing": "off",
         "func-name-matching": "error",
-        "func-names": "off",
+        "func-names": "warn",
         "func-style": [
             "error",
             "declaration"
         ],
-        "function-paren-newline": "error",
+        "function-paren-newline": "off",
         "generator-star-spacing": "error",
         "global-require": "error",
         "guard-for-in": "off",
@@ -108,14 +104,17 @@
             "error",
             "beside"
         ],
-        "indent": "error",
+        "indent": "warn",
         "indent-legacy": "off",
         "init-declarations": "error",
         "jsx-quotes": "error",
         "key-spacing": "error",
         "keyword-spacing": "off",
         "line-comment-position": "off",
-        "linebreak-style": "off",
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
         "lines-around-comment": "error",
         "lines-around-directive": "off",
         "lines-between-class-members": "error",
@@ -128,15 +127,18 @@
         "max-params": "error",
         "max-statements": "off",
         "max-statements-per-line": "off",
-        "multiline-comment-style": "off",
+        "multiline-comment-style": [
+            "error",
+            "bare-block"
+        ],
         "multiline-ternary": [
             "error",
             "always-multiline"
         ],
         "new-parens": "error",
         "newline-after-var": "off",
-        "newline-before-return": "error",
-        "newline-per-chained-call": "off",
+        "newline-before-return": "off",
+        "newline-per-chained-call": "error",
         "no-alert": "error",
         "no-array-constructor": "error",
         "no-async-promise-executor": "error",
@@ -145,7 +147,7 @@
         "no-buffer-constructor": "error",
         "no-caller": "error",
         "no-catch-shadow": "error",
-        "no-confusing-arrow": "error",
+        "no-confusing-arrow": "off",
         "no-continue": "error",
         "no-div-regex": "error",
         "no-duplicate-imports": "error",
@@ -182,7 +184,7 @@
         "no-multi-str": "error",
         "no-multiple-empty-lines": "error",
         "no-native-reassign": "error",
-        "no-negated-condition": "off",
+        "no-negated-condition": "error",
         "no-negated-in-lhs": "error",
         "no-nested-ternary": "error",
         "no-new": "error",
@@ -210,7 +212,7 @@
         "no-return-await": "error",
         "no-script-url": "error",
         "no-self-compare": "error",
-        "no-sequences": "off",
+        "no-sequences": "error",
         "no-shadow": "off",
         "no-shadow-restricted-names": "error",
         "no-spaced-func": "off",
@@ -225,8 +227,8 @@
         "no-underscore-dangle": "off",
         "no-unmodified-loop-condition": "error",
         "no-unneeded-ternary": "error",
-        "no-unused-expressions": "off",
-        "no-use-before-define": "error",
+        "no-unused-expressions": "error",
+        "no-use-before-define": "off",
         "no-useless-call": "error",
         "no-useless-catch": "error",
         "no-useless-computed-key": "error",
@@ -253,7 +255,7 @@
         "padding-line-between-statements": "error",
         "prefer-arrow-callback": "off",
         "prefer-const": "error",
-        "prefer-destructuring": "error",
+        "prefer-destructuring": "off",
         "prefer-named-capture-group": "error",
         "prefer-numeric-literals": "error",
         "prefer-object-spread": "error",
@@ -265,12 +267,15 @@
         "quote-props": "off",
         "quotes": "off",
         "radix": "error",
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "react/no-unknown-property": "error",
         "require-atomic-updates": "error",
         "require-await": "error",
-        "require-jsdoc": "error",
+        "require-jsdoc": "off",
         "require-unicode-regexp": "error",
         "rest-spread-spacing": "error",
-        "semi": "off",
+        "semi": "error",
         "semi-spacing": "error",
         "semi-style": [
             "error",
