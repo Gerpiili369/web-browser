@@ -5,6 +5,8 @@ import TabControls from './TabControls';
 import Content from './Content';
 import PropTypes from 'prop-types';
 
+const { remote } = window.require('electron');
+
 class Tab extends Component {
     constructor(props) {
         super(props);
@@ -31,6 +33,7 @@ class Tab extends Component {
             loading: false,
             url: evt.target.getURL(),
         });
+        remote.getCurrentWindow().webContents.send('tabUpdate', { id: this.props.id, key: 'url', value: this.state.url });
     }
 
     handleManualUrlChange(url) {
@@ -42,7 +45,7 @@ class Tab extends Component {
     render() {
         return (
             <div className="tab">
-                <TabControls tabState={ this.state } onManualUrlEntry={ this.handleManualUrlChange } />
+                <TabControls tabState={ this.state } tabId={ this.props.id } onManualUrlEntry={ this.handleManualUrlChange } />
                 <Content url={ this.state.urlEntry } onLoadStart={ this.handleLoadStart } onLoadStop={ this.handleLoadStop } />
             </div>
         );
@@ -51,6 +54,7 @@ class Tab extends Component {
 
 Tab.propTypes = {
     url: PropTypes.string,
+    id: PropTypes.number,
 };
 
 export default Tab;

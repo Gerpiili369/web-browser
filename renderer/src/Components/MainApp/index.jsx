@@ -1,15 +1,17 @@
 // MainApp Component
 
 import React, { Component } from 'react';
+import Toolbar from './Toolbar';
 import OpenTabs from './OpenTabs';
+import TabBar from './TabBar';
 
 class MainApp extends Component {
     render() {
         return (
             <div className="main-app">
-                <div className="toolbar">sidebar placeholder</div>
+                <Toolbar />
                 <OpenTabs />
-                <div className="tab-bar">tab bar placeholder</div>
+                <TabBar />
             </div>
         );
     }
