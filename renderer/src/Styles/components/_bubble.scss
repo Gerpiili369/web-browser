@@ -1,0 +1,47 @@
+.bubble {
+    stroke: black;
+}
+
+.bubble__title {
+    text-align: center;
+}
+
+.bubble__content {
+    position: relative;
+    margin: 5px auto;
+    padding: 5px;
+    border: 1px solid gainsboro;
+    border-radius: 100px;
+    
+    width: 50px;
+    min-height: 50px;
+
+    &:hover {
+        transform: scale(1.1, 1.1);
+
+        .bubble__close {
+            display: flex;
+        }
+    }
+}
+
+.bubble__icon {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    height: 12px;
+    padding: 2px
+}
+
+.bubble__close {
+    display: none;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    height: 12px;
+    padding: 2px;
+
+    &:hover {
+        background: red;
+    }
+}
