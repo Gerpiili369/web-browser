@@ -4,10 +4,13 @@
     "description": "",
     "main": "main/src",
     "scripts": {
+        "linter": "eslint . --ext .js && eslint . --ext .jsx",
+        "fixer": "eslint . --ext .js --fix && eslint . --ext .jsx --fix",
         "bundle": "webpack",
         "bundle-dev": "webpack -d --watch",
         "serve": "electron .",
         "serve-dev": "nodemon --watch ./main/src/**/* --exec npm run serve",
+        "start-prod": "npm-run-all --parallel bundle serve",
         "start": "npm-run-all --parallel bundle-dev serve-dev"
     },
     "repository": {
