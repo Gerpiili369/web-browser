@@ -14,6 +14,7 @@ class TabBar extends Component {
         };
 
         this.updateTabs = this.updateTabs.bind(this);
+        this.toggleOpen = this.toggleOpen.bind(this);
         this.close = this.close.bind(this);
     }
 
@@ -29,6 +30,10 @@ class TabBar extends Component {
         this.setState({ tabs });
     }
 
+    toggleOpen(id) {
+        remote.getCurrentWindow().webContents.send('toggleTabOpen', id);
+    }
+
     close(id) {
         remote.getCurrentWindow().webContents.send('closeTab', id);
     }
@@ -37,7 +42,7 @@ class TabBar extends Component {
         return (
             <div className="tab-bar">
                 { this.state.tabs.map((value, index) => (
-                    value ? <Bubble title={ value.url } id={ index } close={ this.close } /> : null
+                    value ? <Bubble title={ value.url } id={ index } close={ this.close } select={ value.isOpen } innerClick={ this.toggleOpen }/> : null
                 )) }
             </div>
         );

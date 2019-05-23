@@ -44,7 +44,7 @@ class Tab extends Component {
 
     render() {
         return (
-            <div className="tab">
+            <div className={ `tab${ this.props.isOpen ? ' open' : ' hidden' }` }>
                 <TabControls tabState={ this.state } tabId={ this.props.id } onManualUrlEntry={ this.handleManualUrlChange } />
                 <Content url={ this.state.urlEntry } onLoadStart={ this.handleLoadStart } onLoadStop={ this.handleLoadStop } />
             </div>
@@ -55,6 +55,7 @@ class Tab extends Component {
 Tab.propTypes = {
     url: PropTypes.string,
     id: PropTypes.number,
+    isOpen: PropTypes.bool,
 };
 
 export default Tab;
