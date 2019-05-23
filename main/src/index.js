@@ -1,5 +1,6 @@
 const
     { app, BrowserWindow } = require('electron'),
+    wallpaper = require('wallpaper'),
     path = require('path');
 let win = null;
 
@@ -34,4 +35,8 @@ app.on('window-all-closed', () => {
 
 app.on('activate', () => {
     if (!win) createWindow();
+});
+
+wallpaper.get().then(path => {
+    global.background = path.split('\\').join('/');
 });

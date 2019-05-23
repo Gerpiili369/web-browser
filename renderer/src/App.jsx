@@ -7,12 +7,14 @@ import ReactDOM from 'react-dom';
 import TitleBar from './Components/TitleBar';
 import MainApp from './Components/MainApp';
 
+const { remote } = window.require('electron');
+
 class App extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            background: '',
+            background: remote.getGlobal('background'),
         };
     }
 
