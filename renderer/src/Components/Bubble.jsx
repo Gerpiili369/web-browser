@@ -26,7 +26,7 @@ class Bubble extends Component {
             <div className={ `bubble${ this.props.select ? ' select' : '' }` } >
                 <div className="bubble__content">
                     <Icon className="bubble__icon" width="16" height="16" />
-                    <Close className="bubble__close" width="8" height="8" onClick={ this.close } />
+                    <Close className="bubble__close" width="10" height="10" onClick={ this.close } />
                     <div className="bubble__inner" onClick={ this.innerClick }></div>
                 </div>
                 <div className="bubble__title">{ this.props.title }</div>
