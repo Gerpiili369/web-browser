@@ -14,29 +14,19 @@ class TabBar extends Component {
         };
 
         this.updateTabs = this.updateTabs.bind(this);
-        this.updateTab = this.updateTab.bind(this);
         this.close = this.close.bind(this);
     }
 
     componentDidMount() {
         ipcRenderer.on('tabList', this.updateTabs);
-        ipcRenderer.on('tabUpdate', this.updateTab);
     }
 
     componentWillUnmount() {
         ipcRenderer.removeListener('tabList', this.updateTabs);
-        ipcRenderer.removeListener('tabUpdate', this.updateTab);
     }
 
     updateTabs(event, tabs) {
         this.setState({ tabs });
-    }
-
-    updateTab(event, args) {
-        this.setState(state => {
-            if (args.key && state.tabs[args.id]) state.tabs[args.id][args.key] = args.value;
-            return state;
-        });
     }
 
     close(id) {

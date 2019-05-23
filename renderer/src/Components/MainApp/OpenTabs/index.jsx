@@ -15,16 +15,19 @@ class OpenTabs extends Component {
 
         this.createTab = this.createTab.bind(this);
         this.closeTab = this.closeTab.bind(this);
+        this.updateTab = this.updateTab.bind(this);
     }
 
     componentDidMount() {
         ipcRenderer.on('createTab', this.createTab);
         ipcRenderer.on('closeTab', this.closeTab);
+        ipcRenderer.on('tabUpdate', this.updateTab);
     }
 
     componentWillUnmount() {
         ipcRenderer.removeListener('createTab', this.createTab);
         ipcRenderer.removeListener('closeTab', this.closeTab);
+        ipcRenderer.removeListener('tabUpdate', this.updateTab);
     }
 
     createTab(event, args) {
@@ -34,6 +37,13 @@ class OpenTabs extends Component {
     closeTab(event, id) {
         this.setState(state => {
             state.tabs[id] = null;
+            return state;
+        });
+    }
+
+    updateTab(event, args) {
+        this.setState(state => {
+            if (args.key && state.tabs[args.id]) state.tabs[args.id][args.key] = args.value;
             return state;
         });
     }
