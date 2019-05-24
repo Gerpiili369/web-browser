@@ -20,6 +20,7 @@ class Tab extends Component {
         this.handleLoadStart = this.handleLoadStart.bind(this);
         this.handleLoadStop = this.handleLoadStop.bind(this);
         this.handleManualUrlChange = this.handleManualUrlChange.bind(this);
+        this.handleTitleUpdate = this.handleTitleUpdate.bind(this);
         this.handleFaviconUpdate = this.handleFaviconUpdate.bind(this);
     }
 
@@ -43,6 +44,10 @@ class Tab extends Component {
         });
     }
 
+    handleTitleUpdate(evt) {
+        if (evt.title) remote.getCurrentWindow().webContents.send('tabUpdate', { id: this.props.id, key: 'title', value: evt.title });
+    }
+
     handleFaviconUpdate(evt) {
         if (evt.favicons.length > 0) remote.getCurrentWindow().webContents.send('tabUpdate', { id: this.props.id, key: 'favicon', value: evt.favicons[0] });
     }
@@ -51,7 +56,7 @@ class Tab extends Component {
         return (
             <div className={ `tab${ this.props.isOpen ? ' open' : ' hidden' }` }>
                 <TabControls tabState={ this.state } tabId={ this.props.id } onManualUrlEntry={ this.handleManualUrlChange } />
-                <Content url={ this.state.urlEntry } onLoadStart={ this.handleLoadStart } onLoadStop={ this.handleLoadStop } onFaviconUpdate={ this.handleFaviconUpdate } />
+                <Content url={ this.state.urlEntry } onLoadStart={ this.handleLoadStart } onLoadStop={ this.handleLoadStop } onTitleUpdate={ this.handleTitleUpdate } onFaviconUpdate={ this.handleFaviconUpdate } />
             </div>
         );
     }
