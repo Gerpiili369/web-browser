@@ -14,6 +14,7 @@ class Content extends Component {
 
         this.webview.current.addEventListener('did-start-loading', this.props.onLoadStart);
         this.webview.current.addEventListener('did-stop-loading', this.props.onLoadStop);
+        this.webview.current.addEventListener('page-favicon-updated', this.props.onFaviconUpdate);
 
     }
 
@@ -22,6 +23,7 @@ class Content extends Component {
 
         this.webview.current.removeEventListener('did-start-loading', this.props.onLoadStart);
         this.webview.current.removeEventListener('did-stop-loading', this.props.onLoadStop);
+        this.webview.current.removeEventListener('page-favicon-updated', this.props.onFaviconUpdate);
 
     }
 
@@ -38,6 +40,7 @@ class Content extends Component {
 Content.propTypes = {
     onLoadStart: PropTypes.function,
     onLoadStop: PropTypes.function,
+    onFaviconUpdate: PropTypes.function,
     url: PropTypes.string
 };
 

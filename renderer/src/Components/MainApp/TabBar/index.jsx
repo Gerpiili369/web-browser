@@ -42,7 +42,7 @@ class TabBar extends Component {
         return (
             <div className="tab-bar">
                 { this.state.tabs.map((value, index) => (
-                    value ? <Bubble title={ value.url } id={ index } close={ this.close } select={ value.isOpen } innerClick={ this.toggleOpen }/> : null
+                    value ? <Bubble title={ value.url } id={ index } close={ this.close } select={ value.isOpen } innerClick={ this.toggleOpen } icon={ value.favicon } /> : null
                 )) }
             </div>
         );

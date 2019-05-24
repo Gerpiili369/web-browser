@@ -2,7 +2,6 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Icon from '../Icons/Icon';
 import Close from '../Icons/Close';
 
 class Bubble extends Component {
@@ -25,7 +24,7 @@ class Bubble extends Component {
         return (
             <div className={ `bubble${ this.props.select ? ' select' : '' }` } >
                 <div className="bubble__content">
-                    <Icon className="bubble__icon" width="16" height="16" />
+                    <img src={ this.props.icon } className="bubble__icon" />
                     <Close className="bubble__close" width="10" height="10" onClick={ this.close } />
                     <div className="bubble__inner" onClick={ this.innerClick }></div>
                 </div>
@@ -37,6 +36,7 @@ class Bubble extends Component {
 
 Bubble.propTypes = {
     title: PropTypes.string,
+    icon: PropTypes.string,
     select: PropTypes.bool,
     close: PropTypes.func,
     innerClick: PropTypes.func,
